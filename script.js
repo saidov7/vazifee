@@ -1,66 +1,57 @@
-// 1
-// let a = parseInt(prompt("Birinchi sonni kiriting:"));
-// let b = parseInt(prompt("Ikkinchi sonni kiriting:"));
-// let c = parseInt(prompt("Uchinchi sonni kiriting:"));
-// let count = 0;
-// if (a > 0) count++;
-// if (b > 0) count++;
-// if (c > 0) count++;
-// console.log("Musbat sonlar soni:", count);
+// // 1. Sonning darajasini hisoblash
+// let son = 3, daraja = 5;
+// let natija = son ** daraja;
+// console.log(natija); // 243
 
-// 2
-// let a = parseInt(prompt("Birinchi sonni kiriting:"));
-// let b = parseInt(prompt("Ikkinchi sonni kiriting:"));
-// if (a < b) {
-//     console.log("Kichik sonning tartib raqami: 1");
-// } else {
-//     console.log("Kichik sonning tartib raqami: 2");
-// }
+// // 2. O'rta arifmetik va geometrik qiymatlar
+// let son2 = 48;
+// let orta_arifmetik = (son + son2) / 2;
+// let orta_geometrik = Math.sqrt(son * son2);
+// console.log(orta_arifmetik, orta_geometrik); // 30, 24
 
+// // 3. Sonning ishorasini aniqlash
+// let n = 10;
+// let ishora = n > 0 ? 1 : n < 0 ? -1 : 0;
+// console.log(ishora); // 1
 
-// 3
-// let a = parseInt(prompt("Birinchi sonni kiriting:"));
-// let b = parseInt(prompt("Ikkinchi sonni kiriting:"));
+// // 4. Kvadrat tenglama ildizlar soni
+// let A = 1, B = -6, C = 9;
+// let D = B ** 2 - 4 * A * C;
+// let ildizlar_soni = D > 0 ? 2 : D === 0 ? 1 : 0;
+// console.log(ildizlar_soni); // 1
 
-// if (a < b) {
-//     console.log("Kichik sonning tartib raqami: 1");
-// } else {
-//     console.log("Kichik sonning tartib raqami: 2");
-// }
+// // 5. Doiraning yuzini hisoblash
+// let radius = 5;
+// let doira_yuzi = Math.PI * radius ** 2;
+// console.log(doira_yuzi); // 78.53981633974483
 
+// // 6. Ikki son orasidagi yig'indi
+// let sonA = 8, sonB = 10;
+// let oraliq_yigindi = sonA > sonB ? 0 : ((sonB * (sonB + 1)) / 2) - ((sonA * (sonA - 1)) / 2);
+// console.log(oraliq_yigindi); // 27
 
-// 4
-// let A = parseInt(prompt("A sonini kiriting:"));
-// let B = parseInt(prompt("B sonini kiriting:"));
-// if (A !== B) {
-//     A = B = Math.max(A, B);
-// } else {
-//     A = B = 0;
-// }
-// console.log("A:", A);
-// console.log("B:", B);
+// // 7. Kalkulyator
+// let son1 = 10, son2 = 15, amal = "*";
+// let hisoblash = amal === "+" ? son1 + son2 : amal === "-" ? son1 - son2 : amal === "*" ? son1 * son2 : amal === "/" ? son1 / son2 : 0;
+// console.log(hisoblash); // 150
 
+// // 8. Juft yoki toqligini tekshirish
+// let k = 10;
+// let juftmi = k % 2 === 0;
+// console.log(juftmi); // true
 
-// 5
-// let a = parseInt(prompt("Birinchi sonni kiriting:"));
-// let b = parseInt(prompt("Ikkinchi sonni kiriting:"));
-// let c = parseInt(prompt("Uchinchi sonni kiriting:"));
-// let middle;
-// if ((a > b && a < c) || (a > c && a < b)) {
-//     middle = a;
-// } else if ((b > a && b < c) || (b > c && b < a)) {
-//     middle = b;
-// } else {
-//     middle = c;
-// }
-// console.log("O'rtacha son:", middle);
+// // 9. Uchta sonni tartiblash
+// let x = 10, y = 5, z = 8;
+// let tartiblangan = [x, y, z].sort((a, b) => a - b);
+// console.log(tartiblangan[0], tartiblangan[1], tartiblangan[2]); // 5, 8, 10
 
-
-// 7
-// let year = parseInt(prompt("Yilni kiriting:"));
-// if ((year % 4 === 0 && year % 100 !== 0) || (year % 400 === 0)) {
-//     console.log(year + " - Kabisa yili, 366 kun bor.");
-// } else {
-//     console.log(year + " - Kabisa yil emas, 365 kun bor.");
-// }
-
+// // 10. K soni N ning darajasi ekanligini tekshirish
+// let K = 8, N = 2;
+// let darajaTekshir = (function(K, N) {
+//     while (K > 1) {
+//         if (K % N !== 0) return false;
+//         K /= N;
+//     }
+//     return K === 1;
+// })(K, N);
+// console.log(darajaTekshir); // true
